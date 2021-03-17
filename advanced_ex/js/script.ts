@@ -7,7 +7,7 @@ const starters_table = [{
     foodName: "Cheese plate",
     foodDescription: "Smelly cheese and lumpy stuff",
     foodPrice: 21.90,
-    foodImg: "img/starter_2.png"
+    foodImg: "./img/starter_2.png"
 }, {
     foodName: "Avocado salad",
     foodDescription: "Overly ripe avocado with a tomato",
@@ -20,22 +20,22 @@ const starters_table = [{
     foodImg: "img/starter_4.png"
 }];
 
-
-
-// for (let i in starters_table) {
-//     document.getElementsByTagName("h5")[i].innerText = starters_table[i].foodName;
-// }
-
-for (let i in starters_table) {
-    let foodOutputName : string;
-    foodOutputName = starters_table[i].foodName;
-    document.getElementsByTagName("h5")[i].innerText = foodOutputName;
+function populateHTML(){
+    for (let i in starters_table) {
+        //The starters Menu
+        let foodOutputPrice : string;
+        let foodOutputName = starters_table[i].foodName;
+        let foodOutputDescription = starters_table[i].foodDescription;
+        let foodOutputPrice = starters_table[i].foodPrice;
+        let foodOutputImg = starters_table[i].foodImg;
+        foodOutputDescription = starters_table[i].foodDescription;
+        document.getElementsByTagName("h5")[i].innerText = foodOutputName;
+        document.getElementsByClassName("descriptionOutput")[i].innerText = foodOutputDescription;
+        document.getElementsByClassName("priceOutput")[i].innerText = foodOutputPrice;
+        document.getElementsByClassName("imgOutput")[i].src = foodOutputImg;
+        //
+    }
 }
+populateHTML();
 
-for (let i in starters_table) {
-    let foodOutputDescription : string;
-    foodOutputDescription= starters_table[i].foodDescription;
-    // document.querySelector(".descriptionOutput")[i].innerText = foodOutputDescription;
-    console.log(document.getElementsByClassName("descriptionOutput"));
-}
 

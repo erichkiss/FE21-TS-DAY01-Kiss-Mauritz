@@ -7,7 +7,7 @@ var starters_table = [{
         foodName: "Cheese plate",
         foodDescription: "Smelly cheese and lumpy stuff",
         foodPrice: 21.90,
-        foodImg: "img/starter_2.png"
+        foodImg: "./img/starter_2.png"
     }, {
         foodName: "Avocado salad",
         foodDescription: "Overly ripe avocado with a tomato",
@@ -19,17 +19,20 @@ var starters_table = [{
         foodPrice: 12.90,
         foodImg: "img/starter_4.png"
     }];
-// for (let i in starters_table) {
-//     document.getElementsByTagName("h5")[i].innerText = starters_table[i].foodName;
-// }
-for (var i in starters_table) {
-    var foodOutputName = void 0;
-    foodOutputName = starters_table[i].foodName;
-    document.getElementsByTagName("h5")[i].innerText = foodOutputName;
+function populateHTML() {
+    for (var i in starters_table) {
+        //The starters Menu
+        var foodOutputPrice = void 0;
+        var foodOutputName = starters_table[i].foodName;
+        var foodOutputDescription = starters_table[i].foodDescription;
+        var foodOutputPrice = starters_table[i].foodPrice;
+        var foodOutputImg = starters_table[i].foodImg;
+        foodOutputDescription = starters_table[i].foodDescription;
+        document.getElementsByTagName("h5")[i].innerText = foodOutputName;
+        document.getElementsByClassName("descriptionOutput")[i].innerText = foodOutputDescription;
+        document.getElementsByClassName("priceOutput")[i].innerText = foodOutputPrice;
+        document.getElementsByClassName("imgOutput")[i].src = foodOutputImg;
+        //
+    }
 }
-for (var i in starters_table) {
-    var foodOutputDescription = void 0;
-    foodOutputDescription = starters_table[i].foodDescription;
-    // document.querySelector(".descriptionOutput")[i].innerText = foodOutputDescription;
-    console.log(document.getElementsByClassName("descriptionOutput"));
-}
+populateHTML();
