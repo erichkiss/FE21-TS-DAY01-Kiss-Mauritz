@@ -43,7 +43,7 @@ function printMatthias10() {
 ;
 printMatthias10();
 function printMauritz10() {
-    for (var i = 0; i < 5; i++) {
+    for (var i = 0; i < 10; i++) {
         console.log(object_name[0].lName);
     }
 }

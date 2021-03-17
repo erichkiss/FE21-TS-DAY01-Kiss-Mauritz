@@ -54,7 +54,7 @@ for (let i = 0; i < 5; i++){
 printMatthias10()
 
 function printMauritz10(){
-    for (let i = 0; i < 5; i++){ 
+    for (let i = 0; i < 10; i++){ 
         console.log(object_name[0].lName);
     } 
 }
