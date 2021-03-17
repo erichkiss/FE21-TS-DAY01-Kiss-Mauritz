@@ -42,6 +42,8 @@ const object_name = [{
     fName: "Erich",
     lName: "Kiss"
 }]
+
+
 //first name printing function
 function printMatthias10(){
 for (let i = 0; i < 5; i++){
