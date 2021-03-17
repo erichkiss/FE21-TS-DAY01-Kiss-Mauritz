@@ -25,7 +25,7 @@ function populateHTML() {
         var foodOutputPrice = void 0;
         var foodOutputName = starters_table[i].foodName;
         var foodOutputDescription = starters_table[i].foodDescription;
-        var foodOutputPrice = starters_table[i].foodPrice;
+        foodOutputPrice = starters_table[i].foodPrice;
         var foodOutputImg = starters_table[i].foodImg;
         foodOutputDescription = starters_table[i].foodDescription;
         document.getElementsByTagName("h5")[i].innerText = foodOutputName;

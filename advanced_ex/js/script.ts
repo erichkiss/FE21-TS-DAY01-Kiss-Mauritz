@@ -23,10 +23,10 @@ const starters_table = [{
 function populateHTML(){
     for (let i in starters_table) {
         //The starters Menu
-        let foodOutputPrice : string;
+        let foodOutputPrice : number;
         let foodOutputName = starters_table[i].foodName;
         let foodOutputDescription = starters_table[i].foodDescription;
-        let foodOutputPrice = starters_table[i].foodPrice;
+        foodOutputPrice = starters_table[i].foodPrice;
         let foodOutputImg = starters_table[i].foodImg;
         foodOutputDescription = starters_table[i].foodDescription;
         document.getElementsByTagName("h5")[i].innerText = foodOutputName;
