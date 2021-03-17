@@ -23,14 +23,15 @@ const starters_table = [{
 function populateHTML(){
     for (let i in starters_table) {
         //The starters Menu
-        let foodOutputPrice : number;
-        let foodOutputName = starters_table[i].foodName;
+        let foodOutputPrice : number; // you need to make sure to not overwrite the variable then later
+        let foodOutputName = starters_table[i].foodName; 
         let foodOutputDescription = starters_table[i].foodDescription;
         foodOutputPrice = starters_table[i].foodPrice;
         let foodOutputImg = starters_table[i].foodImg;
         foodOutputDescription = starters_table[i].foodDescription;
         document.getElementsByTagName("h5")[i].innerText = foodOutputName;
-        document.getElementsByClassName("descriptionOutput")[i].innerText = foodOutputDescription;
+        let a: any = document.getElementsByClassName("descriptionOutput")[i];
+        a.innerText = foodOutputDescription;
         document.getElementsByClassName("priceOutput")[i].innerText = foodOutputPrice;
         document.getElementsByClassName("imgOutput")[i].src = foodOutputImg;
         //
